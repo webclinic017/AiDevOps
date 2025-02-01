@@ -1,3 +1,82 @@
+devEops 😆 Develop a self-operation and maintenance platform
+
+Travis Build Status Github All Releases MIT licensed 😋
+
+Author: YoLoveLife.com 👌
+
+Operation and maintenance system solution (growing)
+💪 Practice an operation and maintenance platform centered on assets and application information
+django & rest-framework & bootstrap
+💪 Referenced many Django projects. My Django is really great
+travis & Django TestCase
+💪 Unit testing. The test is not standardized but I try to do it
+
+If you are interested in: automated operation and maintenance, operation and maintenance resource management, etc. ⭐ me, share it with other operation and maintenance personnel
+If you are interested in: Django development, rest-framework, etc. ⭐ me, share it with other developers
+Please ⭐ me!!! Please ⭐ me!!! Please ⭐ me!!!
+
+Regarding the problems I encountered in development, I will write them in the issues for friends in need 🔍 Query
+These questions are the conclusions I reached after searching a lot of information and trying a lot of solutions 😬
+You can search for helper in issues to view the related questions I wrote. I wrote them very carefully.
+If you don’t find the question you are concerned about or you have suggestions for my project, please discuss with me in issues ❤️ Looking forward to receiving your information
+Contents
+
+Introduction
+Platform Overview
+How to Install
+Automatic Operation and Maintenance Function Implementation
+
+Introduction
+
+This self-operation and maintenance platform is committed to the integration and automated operation and maintenance of IT resource information, and provides assistance for operation and maintenance through the integration of service and application configuration information.
+devEops is growing
+
+All operation and maintenance operations are based on the correctness and consistency of information integration (asset information management) 💾
+📊 Provide statistics on asset information, the proportion of application systems, the number of scripts/playbooks called, etc.
+Temporary collection of application information (such as MySQL status, etc.)
+All operation and maintenance operations (scripts | plays) will automatically inject asset information when submitted and be remotely executed through ansible
+All asset information and architecture information are stored in the database for all operation and maintenance personnel to operate
+Developers can log in to the platform to submit work orders to initiate firewall modifications, application releases, daily operation and maintenance 🕘 and other operations, and operation and maintenance personnel can allow operations to proceed
+All application releases and daily operation and maintenance work schedules are displayed 📅
+Detailed permission operation, distinguishing between developers and operation and maintenance personnel
+
+Platform Overview
+Login Interface
+
+LOGIN
+Host Management
+
+HOST
+Batch Host Information Upload
+
+UPLOAD
+Script Writing
+
+SCRIPT
+Timeline Display
+
+TIMELINE
+How to Install
+
+devEops depends on python2.7, many python third-party modules and mysql database
+The following operating environment already has python2.7 and mysql database
+
+$ cd path/to/project/folder/
+
+#Install python third-party library
+$ pip install -r requirements.txt
+
+#Connect to local database and create data table structure
+$ vim apps/deveops/settings.py #Enter database connection method in DATABASES
+$ python apps/manage.py makemigrations
+$ python apps/manage.py migrate
+
+#Start service
+$ python apps/manage.py runserver &
+#Start by default at port 8000 You may need an nginx as a Web server
+
+Self-operation and maintenance function implementation
+
 devEops :laughing: 开发自运维平台
 ================================
 [![Travis Build Status](https://travis-ci.org/YoLoveLife/DevOps.svg?branch=master)](https://travis-ci.org/YoLoveLife/devEops)
